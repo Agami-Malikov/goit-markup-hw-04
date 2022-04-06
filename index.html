@@ -24,7 +24,7 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link header__menu-link--active" href="#">Студия</a>
+              <a class="header__menu-link header__menu-link--active" href="./index.html">Студия</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="./portfolio.html">Портфолио</a>
@@ -57,8 +57,13 @@
   </header>
   <main>
     <section class="hero">
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal__close-btn" type="button" data-modal-close></button>
+        </div>
+      </div>
       <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero__button" type="button">Заказать услугу</button>
+      <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="peculiarity section">
       <div class="container">
@@ -125,12 +130,27 @@
         <ul class="business__list">
           <li class="business__item">
             <img class="business__img" src="images/dev.jpg" width="370" alt="изображение разработки">
+            <div class="business__text">
+              <h3 class="business__subtitle">
+                Десктопные приложения
+              </h3>
+            </div>
           </li>
           <li class="business__item">
             <img class="business__img" src="images/device.jpg" width="370" alt="изображение совместимости гаджетов">
+            <div class="business__text">
+              <h3 class="business__subtitle">
+                Мобильные приложения
+              </h3>
+            </div>
           </li>
           <li class="business__item">
             <img class="business__img" src="images/function.jpg" width="370" alt="изображение функционала">
+            <div class="business__text">
+              <h3 class="business__subtitle">
+                Дизайнерские решения
+              </h3>
+            </div>
           </li>
         </ul>
       </div>
@@ -384,29 +404,29 @@
             присоединяйтесь
           </p>
           <ul class="social">
-            <li class="social__item">
-              <a class="social__link" href="#">
+            <li class="social__item social__item--footer">
+              <a class="social__link social__link--footer" href="#">
                 <svg class="social__icon social__icon--footer" width="20" height="20">
                   <use href="./images/sprites/social.svg#icon-inst"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
+            <li class="social__item social__item--footer">
+              <a class="social__link social__link--footer" href="#">
                 <svg class="social__icon social__icon--footer" width="20" height="20">
                   <use href="./images/sprites/social.svg#icon-twit"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
+            <li class="social__item social__item--footer">
+              <a class="social__link social__link--footer" href="#">
                 <svg class="social__icon social__icon--footer" width="20" height="20">
                   <use href="./images/sprites/social.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
+            <li class="social__item social__item--footer">
+              <a class="social__link social__link--footer" href="#">
                 <svg class="social__icon social__icon--footer" width="20" height="20">
                   <use href="./images/sprites/social.svg#icon-in"></use>
                 </svg>
@@ -417,6 +437,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
