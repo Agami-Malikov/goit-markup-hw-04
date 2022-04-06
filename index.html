@@ -59,11 +59,11 @@
     <section class="hero">
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="modal__close-btn" type="button" data-modal-close></button>
+          <span class="modal__close" data-modal-close></span>
         </div>
       </div>
       <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
+      <button class="hero__button btn" type="button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="peculiarity section">
       <div class="container">
@@ -433,6 +433,21 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer__subscr">
+          <p class="footer__subscr-text">
+            Подпишитесь на рассылку
+          </p>
+          <form class="footer__subscr-form">
+            <label class="visually-hidden" for="email">введите ваш почтовый адрес</label>
+            <input class="footer__subscr-input" id="email" type="text" name="email" placeholder="E-mail" required>
+            <button class="footer__subscr-btn btn" type="submit">
+              Подписаться
+              <svg class="footer__subscr-icon" width="24" height="24">
+                <use href="./images/sprites/form-icons.svg#"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>

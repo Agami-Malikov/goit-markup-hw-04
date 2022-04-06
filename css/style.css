@@ -52,6 +52,19 @@ body {
   text-align: center;
 }
 
+.btn {
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
 /* __HEADER__*/
 
 .header {
@@ -189,19 +202,7 @@ body {
 }
 
 .hero__button {
-  border: none;
   padding: 10px 32px;
-  cursor: pointer;
-  
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 1.8;
-  font-weight: 700;
-  
-  color: var(--main-white-color);
-  background-color: var(--accent-color);
-  letter-spacing: 0.06em;
-  border-radius: 4px;
 }
 
 /* __BACKDROP__*/
@@ -244,37 +245,35 @@ body {
   transition: transform 250ms var(--cubic-b);
 }
 
-.modal__close-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #FFFFFF;
   cursor: pointer;
 }
 
-.modal__close-btn::after,
-.modal__close-btn::before {
+.modal__close::after,
+.modal__close::before {
   position: absolute;
   content: '';
-  height: 10px;
-  width: 2px;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 10px;
   background-color: #000000;
 }
 
-.modal__close-btn::after {
-  transform: rotate(45deg);
+.modal__close::after {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.modal__close-btn::before {
-  transform: rotate(-45deg);
+.modal__close::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* __PECULIARITY__*/
@@ -494,18 +493,17 @@ body {
 
 .footer__inner {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: baseline;
-}
-
-.footer__addresses {
-  margin-right: 70px;
 }
 
 .socials {
   max-width: 206px;
 }
 
-.socials__text {
+.socials__text,
+.footer__subscr-text {
   font-weight: 700;
   color: var(--main-white-color);
   text-transform: uppercase;
@@ -522,6 +520,30 @@ body {
 
 .social__icon--footer {
   fill: var(--main-white-color);
+}
+
+.footer__subscr-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__subscr-input {
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.footer__subscr-input::placeholder {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer__subscr-btn {
+  display: inline-block;
+  padding: 10px 29px;
 }
 
 /* __PORTFOLIO__*/
